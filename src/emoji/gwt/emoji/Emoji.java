@@ -119,7 +119,7 @@ public class Emoji {
 		lookup.put(":hankey:", Emojis.INSTANCE.hankey());
 		lookup.put(":poop:", Emojis.INSTANCE.poop());
 		lookup.put(":shit:", Emojis.INSTANCE.shit());
-		lookup.put(":+1:", Emojis.INSTANCE.plus1());
+		lookup.put(":+1:", Emojis.INSTANCE.add1());
 		lookup.put(":thumbsup:", Emojis.INSTANCE.thumbsup());
 		lookup.put(":-1:", Emojis.INSTANCE.subtract1());
 		lookup.put(":thumbsdown:", Emojis.INSTANCE.thumbsdown());
