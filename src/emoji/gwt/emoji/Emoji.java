@@ -1,8 +1,8 @@
 package emoji.gwt.emoji;
 
+import java.util.HashMap;
 import java.util.Map;
 
-import com.google.gwt.dev.util.collect.HashMap;
 import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.safehtml.shared.SafeUri;
 
@@ -918,5 +918,13 @@ public class Emoji {
 		ImageResource i = resource(name);
 
 		return i == null ? null : i.getSafeUri().asString();
+	}
+
+	public boolean isValid(String name) {
+		if (name == null) {
+			return false;
+		}
+
+		return Emoji.get().resource(name) != null;
 	}
 }
