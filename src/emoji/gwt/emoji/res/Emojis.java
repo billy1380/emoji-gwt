@@ -14,13 +14,13 @@ public interface Emojis extends ClientBundle {
 	ImageResource add1();
 
 	@Source("emojis/100.png")
-	ImageResource oneHundred();
+	ImageResource one00();
 
 	@Source("emojis/1234.png")
 	ImageResource one234();
 
 	@Source("emojis/8ball.png")
-	ImageResource eightBall();
+	ImageResource eightball();
 
 	@Source("emojis/a.png")
 	ImageResource a();
