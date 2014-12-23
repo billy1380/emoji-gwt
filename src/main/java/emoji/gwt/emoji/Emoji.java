@@ -2,6 +2,7 @@ package emoji.gwt.emoji;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.safehtml.shared.SafeUri;
@@ -926,5 +927,9 @@ public class Emoji {
 		}
 
 		return Emoji.get().resource(name) != null;
+	}
+	
+	public Set<String> keyWords() {
+		return lookup.keySet();
 	}
 }
