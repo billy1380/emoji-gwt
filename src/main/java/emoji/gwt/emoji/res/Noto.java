@@ -3777,61 +3777,61 @@ public interface Noto extends ClientBundle, Emojis {
 	 * @see emoji.gwt.emoji.res.Emoji#u1f1ef_1f1f5()
 	 */
 	@Override
-	@Source("noto/1f1ef-1f1f5.png")
+	@Source("twemoji/1f1ef-1f1f5.png")
 	ImageResource u1f1ef_1f1f5();
 	/* (non-Javadoc)
 	 * @see emoji.gwt.emoji.res.Emoji#u1f1f0_1f1f7()
 	 */
 	@Override
-	@Source("noto/1f1f0-1f1f7.png")
+	@Source("twemoji/1f1f0-1f1f7.png")
 	ImageResource u1f1f0_1f1f7();
 	/* (non-Javadoc)
 	 * @see emoji.gwt.emoji.res.Emoji#u1f1e9_1f1ea()
 	 */
 	@Override
-	@Source("noto/1f1e9-1f1ea.png")
+	@Source("twemoji/1f1e9-1f1ea.png")
 	ImageResource u1f1e9_1f1ea();
 	/* (non-Javadoc)
 	 * @see emoji.gwt.emoji.res.Emoji#u1f1e8_1f1f3()
 	 */
 	@Override
-	@Source("noto/1f1e8-1f1f3.png")
+	@Source("twemoji/1f1e8-1f1f3.png")
 	ImageResource u1f1e8_1f1f3();
 	/* (non-Javadoc)
 	 * @see emoji.gwt.emoji.res.Emoji#u1f1fa_1f1f8()
 	 */
 	@Override
-	@Source("noto/1f1fa-1f1f8.png")
+	@Source("twemoji/1f1fa-1f1f8.png")
 	ImageResource u1f1fa_1f1f8();
 	/* (non-Javadoc)
 	 * @see emoji.gwt.emoji.res.Emoji#u1f1eb_1f1f7()
 	 */
 	@Override
-	@Source("noto/1f1eb-1f1f7.png")
+	@Source("twemoji/1f1eb-1f1f7.png")
 	ImageResource u1f1eb_1f1f7();
 	/* (non-Javadoc)
 	 * @see emoji.gwt.emoji.res.Emoji#u1f1ea_1f1f8()
 	 */
 	@Override
-	@Source("noto/1f1ea-1f1f8.png")
+	@Source("twemoji/1f1ea-1f1f8.png")
 	ImageResource u1f1ea_1f1f8();
 	/* (non-Javadoc)
 	 * @see emoji.gwt.emoji.res.Emoji#u1f1ee_1f1f9()
 	 */
 	@Override
-	@Source("noto/1f1ee-1f1f9.png")
+	@Source("twemoji/1f1ee-1f1f9.png")
 	ImageResource u1f1ee_1f1f9();
 	/* (non-Javadoc)
 	 * @see emoji.gwt.emoji.res.Emoji#u1f1f7_1f1fa()
 	 */
 	@Override
-	@Source("noto/1f1f7-1f1fa.png")
+	@Source("twemoji/1f1f7-1f1fa.png")
 	ImageResource u1f1f7_1f1fa();
 	/* (non-Javadoc)
 	 * @see emoji.gwt.emoji.res.Emoji#u1f1ec_1f1e7()
 	 */
 	@Override
-	@Source("noto/1f1ec-1f1e7.png")
+	@Source("twemoji/1f1ec-1f1e7.png")
 	ImageResource u1f1ec_1f1e7();
 	/* (non-Javadoc)
 	 * @see emoji.gwt.emoji.res.Emoji#u0031_20e3()

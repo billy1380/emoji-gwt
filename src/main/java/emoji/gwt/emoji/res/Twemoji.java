@@ -5748,7 +5748,7 @@ public interface Twemoji extends ClientBundle, Emojis {
 	 * @see emoji.gwt.emoji.res.Emoji#u0031_20e3()
 	 */
 	@Override
-	@Source("twemoji/0031-20e3.png")
+	@Source("noto/0031-20e3.png")
 	ImageResource u0031_20e3();
 
 	/*
@@ -5757,7 +5757,7 @@ public interface Twemoji extends ClientBundle, Emojis {
 	 * @see emoji.gwt.emoji.res.Emoji#u0032_20e3()
 	 */
 	@Override
-	@Source("twemoji/0032-20e3.png")
+	@Source("noto/0032-20e3.png")
 	ImageResource u0032_20e3();
 
 	/*
@@ -5766,7 +5766,7 @@ public interface Twemoji extends ClientBundle, Emojis {
 	 * @see emoji.gwt.emoji.res.Emoji#u0033_20e3()
 	 */
 	@Override
-	@Source("twemoji/0033-20e3.png")
+	@Source("noto/0033-20e3.png")
 	ImageResource u0033_20e3();
 
 	/*
@@ -5775,7 +5775,7 @@ public interface Twemoji extends ClientBundle, Emojis {
 	 * @see emoji.gwt.emoji.res.Emoji#u0034_20e3()
 	 */
 	@Override
-	@Source("twemoji/0034-20e3.png")
+	@Source("noto/0034-20e3.png")
 	ImageResource u0034_20e3();
 
 	/*
@@ -5784,7 +5784,7 @@ public interface Twemoji extends ClientBundle, Emojis {
 	 * @see emoji.gwt.emoji.res.Emoji#u0035_20e3()
 	 */
 	@Override
-	@Source("twemoji/0035-20e3.png")
+	@Source("noto/0035-20e3.png")
 	ImageResource u0035_20e3();
 
 	/*
@@ -5793,7 +5793,7 @@ public interface Twemoji extends ClientBundle, Emojis {
 	 * @see emoji.gwt.emoji.res.Emoji#u0036_20e3()
 	 */
 	@Override
-	@Source("twemoji/0036-20e3.png")
+	@Source("noto/0036-20e3.png")
 	ImageResource u0036_20e3();
 
 	/*
@@ -5802,7 +5802,7 @@ public interface Twemoji extends ClientBundle, Emojis {
 	 * @see emoji.gwt.emoji.res.Emoji#u0037_20e3()
 	 */
 	@Override
-	@Source("twemoji/0037-20e3.png")
+	@Source("noto/0037-20e3.png")
 	ImageResource u0037_20e3();
 
 	/*
@@ -5811,7 +5811,7 @@ public interface Twemoji extends ClientBundle, Emojis {
 	 * @see emoji.gwt.emoji.res.Emoji#u0038_20e3()
 	 */
 	@Override
-	@Source("twemoji/0038-20e3.png")
+	@Source("noto/0038-20e3.png")
 	ImageResource u0038_20e3();
 
 	/*
@@ -5820,7 +5820,7 @@ public interface Twemoji extends ClientBundle, Emojis {
 	 * @see emoji.gwt.emoji.res.Emoji#u0039_20e3()
 	 */
 	@Override
-	@Source("twemoji/0039-20e3.png")
+	@Source("noto/0039-20e3.png")
 	ImageResource u0039_20e3();
 
 	/*
@@ -5829,7 +5829,7 @@ public interface Twemoji extends ClientBundle, Emojis {
 	 * @see emoji.gwt.emoji.res.Emoji#u0030_20e3()
 	 */
 	@Override
-	@Source("twemoji/0030-20e3.png")
+	@Source("noto/0030-20e3.png")
 	ImageResource u0030_20e3();
 
 	/*
@@ -5856,7 +5856,7 @@ public interface Twemoji extends ClientBundle, Emojis {
 	 * @see emoji.gwt.emoji.res.Emoji#u0023_20e3()
 	 */
 	@Override
-	@Source("twemoji/0023-20e3.png")
+	@Source("noto/0023-20e3.png")
 	ImageResource u0023_20e3();
 
 	/*
