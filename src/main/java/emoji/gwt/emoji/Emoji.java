@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.RunAsyncCallback;
 import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.safehtml.shared.SafeUri;
 
@@ -26,8 +28,8 @@ public class Emoji {
 	 * 
 	 * @return
 	 */
-	public static Emoji get() {
-		return get(null);
+	public static Emoji get () {
+		return get(null, null);
 	}
 
 	/**
@@ -35,14 +37,15 @@ public class Emoji {
 	 * lookup.
 	 * 
 	 * @param theme
+	 * @oaram ready
 	 * @return
 	 */
-	public static Emoji get(Emojis theme) {
+	public static Emoji get (Emojis theme, Runnable ready) {
 		if (one == null) {
 			one = new Emoji();
 		}
 
-		return one.setTheme(theme);
+		return one.setTheme(theme, ready);
 	}
 
 	private Map<String, ImageResource> lookup = null;
@@ -51,7 +54,7 @@ public class Emoji {
 	/**
 	 * 
 	 */
-	private void build() {
+	private void build () {
 		lookup = new HashMap<String, ImageResource>();
 
 		// smiling face with open mouth and smiling eyes
@@ -2616,42 +2619,57 @@ public class Emoji {
 		lookup.put(":small_blue_diamond:", instance.u1f539());
 	}
 
-	public ImageResource resource(String name) {
+	public ImageResource resource (String name) {
 		return lookup.get(name);
 	}
 
-	public SafeUri safeUri(String name) {
+	public SafeUri safeUri (String name) {
 		ImageResource i = resource(name);
 
 		return i == null ? null : i.getSafeUri();
 	}
 
-	public String uri(String name) {
+	public String uri (String name) {
 		ImageResource i = resource(name);
 
 		return i == null ? null : i.getSafeUri().asString();
 	}
 
-	public boolean isValid(String name) {
-		if (name == null) {
-			return false;
-		}
+	public boolean isValid (String name) {
+		if (name == null) { return false; }
 
 		return Emoji.get().resource(name) != null;
 	}
 
-	public Set<String> keyWords() {
+	public Set<String> keyWords () {
 		return lookup.keySet();
 	}
 
-	public Emoji setTheme(Emojis theme) {
+	public Emoji setTheme (Emojis theme, final Runnable ready) {
 		if (instance == null && theme == null) {
 			theme = Apple.INSTANCE;
 		}
 
 		if (theme != null && theme != instance) {
 			instance = theme;
-			build();
+			GWT.runAsync(new RunAsyncCallback() {
+
+				@Override
+				public void onSuccess () {
+					build();
+					if (ready != null) {
+						ready.run();
+					}
+				}
+
+				@Override
+				public void onFailure (Throwable reason) {}
+			});
+
+		} else {
+			if (ready != null) {
+				ready.run();
+			}
 		}
 
 		return this;
