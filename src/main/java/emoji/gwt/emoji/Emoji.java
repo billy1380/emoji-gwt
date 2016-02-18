@@ -23,6 +23,10 @@ public class Emoji {
 
 	private static Emoji one = null;
 
+	public static interface Ready {
+		void ready (Emoji emoji);
+	}
+
 	/**
 	 * Get Emoji with default theme.
 	 * 
@@ -40,7 +44,7 @@ public class Emoji {
 	 * @oaram ready
 	 * @return
 	 */
-	public static Emoji get (Emojis theme, Runnable ready) {
+	public static Emoji get (Emojis theme, Ready ready) {
 		if (one == null) {
 			one = new Emoji();
 		}
@@ -2638,14 +2642,14 @@ public class Emoji {
 	public boolean isValid (String name) {
 		if (name == null) { return false; }
 
-		return Emoji.get().resource(name) != null;
+		return resource(name) != null;
 	}
 
 	public Set<String> keyWords () {
 		return lookup.keySet();
 	}
 
-	public Emoji setTheme (Emojis theme, final Runnable ready) {
+	public Emoji setTheme (Emojis theme, final Ready ready) {
 		if (instance == null && theme == null) {
 			theme = Apple.INSTANCE;
 		}
@@ -2658,7 +2662,7 @@ public class Emoji {
 				public void onSuccess () {
 					build();
 					if (ready != null) {
-						ready.run();
+						ready.ready(Emoji.this);
 					}
 				}
 
@@ -2668,7 +2672,7 @@ public class Emoji {
 
 		} else {
 			if (ready != null) {
-				ready.run();
+				ready.ready(this);
 			}
 		}
 
