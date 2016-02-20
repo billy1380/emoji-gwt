@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.RunAsyncCallback;
 import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.safehtml.shared.SafeUri;
 
@@ -21,13 +23,17 @@ public class Emoji {
 
 	private static Emoji one = null;
 
+	public static interface Ready {
+		void ready (Emoji emoji);
+	}
+
 	/**
 	 * Get Emoji with default theme.
 	 * 
 	 * @return
 	 */
 	public static Emoji get () {
-		return get(null);
+		return get(null, null);
 	}
 
 	/**
@@ -38,12 +44,12 @@ public class Emoji {
 	 * @oaram ready
 	 * @return
 	 */
-	public static Emoji get (Emojis theme) {
+	public static Emoji get (Emojis theme, Ready ready) {
 		if (one == null) {
 			one = new Emoji();
 		}
 
-		return one.setTheme(theme);
+		return one.setTheme(theme, ready);
 	}
 
 	private Map<String, ImageResource> lookup = null;
@@ -2643,15 +2649,31 @@ public class Emoji {
 		return lookup.keySet();
 	}
 
-	public Emoji setTheme (Emojis theme) {
+	public Emoji setTheme (Emojis theme, final Ready ready) {
 		if (instance == null && theme == null) {
 			theme = Apple.INSTANCE;
 		}
 
 		if (theme != null && theme != instance) {
 			instance = theme;
+			GWT.runAsync(new RunAsyncCallback() {
 
-			build();
+				@Override
+				public void onSuccess () {
+					build();
+					if (ready != null) {
+						ready.ready(Emoji.this);
+					}
+				}
+
+				@Override
+				public void onFailure (Throwable reason) {}
+			});
+
+		} else {
+			if (ready != null) {
+				ready.ready(this);
+			}
 		}
 
 		return this;
