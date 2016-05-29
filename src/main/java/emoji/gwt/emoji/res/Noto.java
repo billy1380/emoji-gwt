@@ -15,7 +15,7 @@ import com.google.gwt.resources.client.ImageResource;
  * @author William Shakour (billy1380)
  *
  */
-public interface Noto extends ClientBundle, Emojis {
+interface Noto extends ClientBundle, Emojis {
 	public static final Noto INSTANCE = GWT.create(Noto.class);
 	/* (non-Javadoc)
 	 * @see emoji.gwt.emoji.res.Emoji#u1f604()

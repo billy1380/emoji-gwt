@@ -15,7 +15,7 @@ import com.google.gwt.resources.client.ImageResource;
  * @author William Shakour (billy1380)
  *
  */
-public interface Twemoji extends ClientBundle, Emojis {
+interface Twemoji extends ClientBundle, Emojis {
 	public static final Twemoji INSTANCE = GWT.create(Twemoji.class);
 
 	/*
