@@ -57,6 +57,8 @@ public class Emoji {
 	private Collection<String> keywords = null;
 
 	public ImageResource resource (String name) {
+		if (instance == null) return null;
+
 		// smiling face with open mouth and smiling eyes
 		if (":u1f604:".equals(name)) return instance.u1f604();
 		if (":smile:".equals(name)) return instance.u1f604();
@@ -4348,9 +4350,10 @@ public class Emoji {
 			themeName = "apple";
 		}
 
-		if (themeName != null && !currentThemeName.equals(themeName)) {
+		if (currentThemeName == null
+				|| (themeName != null && !currentThemeName.equals(themeName))) {
 			currentThemeName = themeName;
-			
+
 			GWT.runAsync(new RunAsyncCallback() {
 
 				@Override
